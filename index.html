@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TODO</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="todo.css">
+</head>
+<body>
+
+     <div id="container">
+
+         <header>
+             <h1>Create TODO List</h1>
+         </header>
+
+         <main>
+             <section id="formfield">
+                 <h3>Add task in your todo list</h3>
+                 <form>
+                     <textarea name="task" rows="3" cols="50"></textarea>
+                     <input id="add" type="button" value="Add" onclick="func()"/>
+                  </form>
+             </section>
+
+             <section id="list">
+                 <h3>My TODO List</h3>
+                 <ul id="list_ul"></ul>
+             </section>
+         </main>
+
+    </div>
+     
+    <script src="todo.js"></script>
+
+</body>
+</html>

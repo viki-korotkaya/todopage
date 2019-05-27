@@ -1,0 +1,148 @@
+* {
+    margin:0;
+    padding:0;
+    color: rgba(108, 89, 108, 0.84);
+}
+
+html,
+body {
+    height:100%;
+    background-image: linear-gradient(to top, #fff7c9, #ffecdb);
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    flex: 0 0 auto;
+}
+
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (min-width: 600px) {
+    main {
+        flex-direction: row;
+    }
+}
+
+section {
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+#list {
+
+}
+#list ul>li {
+    list-style-type: none;
+}
+
+label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+}
+label:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+label input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+label input:checked ~ .checkmark:after {
+    display: block;
+}
+label .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+label.checked {
+  text-decoration: line-through;
+}
+
+#formfield {
+    border: 1px solid rgba(149, 72, 44, 0.22);
+    background-color: rgba(149, 72, 44, 0.22);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#add {
+    margin-top: 15px;
+    padding: 7px 0;
+    border: 1px solid rgba(188, 188, 188, 0.44);
+    width: 100px;
+    background-color: rgba(76, 63, 33, 0.26);
+    cursor: pointer;
+}
+
+#add:hover{
+   font-weight: bold;
+    background-color: rgba(185, 45, 45, 0.72);
+    color: white;
+}
+
+
+h1 {
+    font-family: "Segoe UI";
+    color: rgba(79, 61, 79, 0.84);
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+h3 {
+   margin: 15px auto;
+}
+
+footer {
+    flex: 0 0 auto;
+    text-align: right;
+    color: rgba(79, 61, 79, 0.84);
+}
+
+footer a {
+    text-decoration: none;
+}
